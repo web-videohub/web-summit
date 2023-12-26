@@ -1,68 +1,39 @@
+<%@ page language="java" contentType="text/html; charset=utf-8"
+         pageEncoding="utf-8"%>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>Web Study</title>
+    <title>메인화면</title>
     <style>
-        .test1 {
-            background-color: #1E2026;
+        body {
+            background-color: #1e2026;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            flex-direction: column;
         }
-        .test2 {
-            float: left;
-            background-color: #496D8C;
-            width: 700px;
-            height: 500px;
-            margin-top: 50px;
+        .tex {
+            width: 1000px;
+            height: 600px;
+            margin: auto;
+            background-color: #496d8c;
             border: 2px solid transparent;
             border-radius: 30px;
-            background-image: linear-gradient(#323640, #4E5463),
-            linear-gradient(to right, #2A8C68 0%, #04BF68 100%);
+            background-image: linear-gradient(#323640, #4e5463),
+            linear-gradient(to right, #2a8c68 0%, #04bf68 100%);
             background-origin: border-box;
             background-clip: content-box, border-box;
         }
-        /**/
-        .test3 {
-            color: white;
-            background-color: #FFFFFF;
-            width: auto;
-            height: 120px;
-            margin-top: 650px;
-        }
-        .test4 {
-            color: black;
-            float: left;
-            background-color: #496D8C;
-            width: 300px;
-            height: 800px;
-            margin: 50px;
-            border: 2px solid transparent;
-            border-radius: 30px;
-            background-image: linear-gradient(#747D94, #747D94),
-            linear-gradient(to right, #04BF68 0%, #2A8C68 100%);
-            background-origin: border-box;
-            background-clip: content-box, border-box;
-        }
-        .test5 {
-            color: white;
-            clear: both;
-            background-color: #1E2026;
-            width: 700px;
-            height: 250px;
-            transform: translate(0, -120%);
-            border: 2px solid transparent;
-            border-radius: 30px;
-            background-image: linear-gradient(#323640, #4E5463),
-            linear-gradient(to right, #08A65C 0%, #04BF68 100%);
-            background-origin: border-box;
-            background-clip: content-box, border-box;
+        #maintext {
+            color: #04bf68;
+            text-align: center;
+            font-size: 5vh;
         }
     </style>
 </head>
-<body class="test1">
-<div class="test2"></div>
-<div class="test4">
-    <div class="test3"></div>
-</div>
-<div class="test5"></div>
+<body>
+    <div><h3 id="maintext">안녕하세요 디수쿠도 입니다!</h3></div>
+    <div class="tex"></div>
 </body>
 </html>
