@@ -13,9 +13,9 @@
     <div id="snowfall"></div>
     <%--<jsp:include page="include/header.jsp"/>--%>
     <div class="mainDiv">
-        <img id="santa" src="../img/santaHat.png" alt="">
+        <img id="santa" src="/assets/img/santaHat.png" alt="">
         <div class="mainTitle">
-            <h1>로켓프로젝트</h1>
+            <h1>정상회담</h1>
         </div>
         <div class="loginDiv">
             <div class="inputDiv">
