@@ -21,9 +21,9 @@
                 <h4>즐거운 크리스마스 보내세요!</h4>
             </div>
             <div class="inputDiv">
-                <span class="inputText">아이디<span class="redStar">*</span></span>
+                <span class="inputText">아이디<span class="redStar">&nbsp;*</span></span>
                 <input id="inputDiv1" type="text" name="account">
-                <span class="inputText">비밀번호<span class="redStar">*</span></span>
+                <span class="inputText">비밀번호<span class="redStar">&nbsp;*</span></span>
                 <input id="inputDiv2" type="password" name="password">
             </div>
             <div class="enterDiv">
