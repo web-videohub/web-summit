@@ -14,29 +14,36 @@
     <%--<jsp:include page="include/header.jsp"/>--%>
     <div class="mainDiv">
         <img id="santa" src="/assets/img/santaHat.png" alt="">
-        <div class="mainTitle">
-            <h1>정상회담</h1>
-        </div>
-        <div class="loginDiv">
+
+        <form class="loginDiv" action="" method="">
+            <div class="mainTitle">
+                <h1>안녕하세요? 반가워요!</h1>
+                <h4>즐거운 크리스마스 보내세요!</h4>
+            </div>
             <div class="inputDiv">
-                <input id="inputDiv1" type="text" name="account" placeholder=" 아이디">
-                <input id="inputDiv2" type="password" name="password" placeholder=" 패스워드">
+                <span class="inputText">아이디<span class="redStar">*</span></span>
+                <input id="inputDiv1" type="text" name="account">
+                <span class="inputText">비밀번호<span class="redStar">*</span></span>
+                <input id="inputDiv2" type="password" name="password">
             </div>
             <div class="enterDiv">
-                <button id="loginBtn" type="button" name="loginButton"> 로그인 </button>
+                <a href="#">비밀번호가 생각나지 않나요?</a>
             </div>
+            <button id="loginBtn" type="submit"> 로그인 </button>
+            <div class="regiDiv">
+                아직 가입하시지 않으셨나요? <a href="#">계정만들기</a>
+            </div>
+        </form>
+        <div class="newsDiv">
+
         </div>
-        <div class="regiDiv">
-            <a href="#">아이디 찾기</a>
-            <a href="#">비밀번호 찾기</a>
-            <a href="#">회원가입</a>
-        </div>
+
     </div>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             const snowfallContainer = document.getElementById("snowfall");
 
-            // Create snowflakes
+            // 눈송이 뿌리기
             for (let i = 0; i < 50; i++) {
                 const snowflake = document.createElement("div");
                 snowflake.className = "snowflake";
