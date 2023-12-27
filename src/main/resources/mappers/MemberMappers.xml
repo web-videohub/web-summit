@@ -1,0 +1,31 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.teamrocket.summit.repository.MemberMapper">
+
+    <insert id="save">
+        INSERT INTO tbl_member
+        (user_account, user_name, user_email, user_password)
+        VALUES
+        (#{userAccount}, #{userName}, #{userEmail}, #{userPassword})
+    </insert>
+
+    <select id="findMember" resultType="com.teamrocket.summit.entity.Member">
+        SELECT
+            user_account, user_name, user_email, user_password, user_regDate
+        FROM tbl_member
+        WHERE user_account = #{userAccount}
+    </select>
+
+    <select id="isDuplicate" resultType="boolean">
+        SELECT COUNT(*)
+        FROM tbl_member
+        <if test="type == 'account'">
+            WHERE user_account = #{keyword}
+        </if>
+        <if test="type == 'email'">
+            WHERE user_email = #{keyword}
+        </if>
+    </select>
+</mapper>
