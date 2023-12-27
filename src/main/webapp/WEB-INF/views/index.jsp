@@ -13,6 +13,7 @@
     <div id="snowfall"></div>
     <%--<jsp:include page="include/header.jsp"/>--%>
     <div class="mainDiv">
+        <img id="santa" src="../img/santaHat.png" alt="">
         <div class="mainTitle">
             <h1>로켓프로젝트</h1>
         </div>
