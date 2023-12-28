@@ -15,7 +15,7 @@
 <div class="mainDiv">
     <img id="santa" src="/assets/img/santaHat.png" alt="">
 
-    <form class="loginForm" action="" method="">
+    <form class="loginForm" action="/login" method="POST">
         <div class="mainTitle">
             <h1>안녕하세요? 반가워요!</h1>
             <h4>즐거운 크리스마스 보내세요!</h4>
@@ -27,11 +27,11 @@
             <input id="inputDiv2" type="password" name="password">
         </div>
         <div class="enterDiv">
-            <a href="#">비밀번호가 생각나지 않나요?</a>
+            <a href="/find-pw">비밀번호가 생각나지 않나요?</a>
         </div>
         <button id="loginBtn" type="submit"> 로그인 </button>
         <div class="regiDiv">
-            아직 가입하시지 않으셨나요? <a href="/sign-up">계정만들기</a>
+            아직 가입하시지 않으셨나요? <a href="/register">계정만들기</a>
         </div>
     </form>
     <div class="newsDiv">
