@@ -19,14 +19,36 @@ a {
     font-size: 17px;
     color: #0080FF
 }
-.mainDiv {
+.registerForm {
+    display: flex;
+    margin: 0 auto 20px;
+    flex-direction: column;
+    width: 60vh;
+    justify-content: center;
+    align-content: center;
+}
+.inputDiv {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+.inputDiv input {
+    width: 400px;
+    height: 40px;
+    background-color: #1e2026;
+    border-radius: 10px;
+    color: aliceblue;
+    font-size: 20px;
+    font-weight: bold;
+}
+.registerDiv {
     margin: 100px auto;
     display: flex;
     justify-content: center;
     align-content: center;
     flex-direction: row;
-    width: 950px;
-    height: 600px;
+    width: 500px;
+    height: 700px;
     /*
     background-color: #496d8c;
      */
@@ -42,33 +64,7 @@ a {
     position: relative;
     animation: fadeInDown 1.5s;
 }
-.loginForm {
-    display: flex;
-    margin: 0 auto 20px;
-    flex-direction: column;
-    width: 60vh;
-    justify-content: center;
-    align-content: center;
-}
-
-.inputDiv {
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-}
-.inputDiv input {
-    width: 400px;
-    height: 40px;
-    background-color: #1e2026;
-    border-radius: 10px;
-    color: aliceblue;
-    font-size: 20px;
-    font-weight: bold;
-}
-#inputDiv1 {
-    margin-bottom: 10px;
-}
-#loginBtn {
+#registerBtn {
     width: 400px;
     height: 50px;
     background-color: #2a8c68;
@@ -78,30 +74,36 @@ a {
     font-weight: bold;
     margin: 0 auto;
 }
-
-.regiDiv {
-    width: 400px;
-    font-weight: bold;
-    color: rgba(240, 248, 255, 0.52);
+.inputText {
+    color: #a6acb1;
     font-size: 17px;
-    margin: 20px auto 0;
+    font-weight: bold;
+    margin-bottom: 5px;
 }
-.mainTitle {
+.redStar {
+    font-size: 17px;
+    font-weight: bold;
+    color: red;
+}
+.registerTitle {
     color: aliceblue;
     font-size: 20px;
     font-weight: bold;
-    margin-top: -80px;
+    margin-top: 0;
     text-align: center;
     margin-bottom: 0;
 }
-.mainTitle h1 {
-    margin-bottom: 5px;
+.inputDiv input {
+    margin-bottom: 10px;
 }
-.mainTitle h4 {
-    margin-top: 0;
-    font-size: 20px;
-    text-align: center;
-    color: #969ba1;
+.inputDiv #inputDiv4 {
+    margin-bottom: 25px;
+}
+.goLogin {
+    width: 400px;
+    font-weight: bold;
+    font-size: 17px;
+    margin: 5px auto 0;
 }
 #santa {
     align-content: center;
@@ -111,37 +113,6 @@ a {
     top: -110px;
     right: -70px;
 }
-.inputText {
-    color: aliceblue;
-    font-size: 17px;
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-.enterDiv {
-    width: 400px;
-    margin: 20px auto 20px;
-    font-size: 17px;
-    font-weight: bold;
-
-}
-.redStar {
-    font-size: 17px;
-    font-weight: bold;
-    color: red;
-}
-.newsDiv {
-    width: 400px;
-    height: 100%;
-    background-color: #637ad3;
-    border-radius: 25px;
-
-    text-align: center;
-}
-
-
-
-
-
 
 
 /* 키프레임 애니메이션 */
@@ -155,7 +126,6 @@ a {
         /*transform: translateZ(0);*/
     }
 }
-
 
 /*눈내리기*/
 #snowfall {
