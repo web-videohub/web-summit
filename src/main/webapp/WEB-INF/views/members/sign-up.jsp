@@ -1,42 +1,36 @@
-<%@ page language="java" contentType="text/html; charset=utf-8"
-         pageEncoding="utf-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="/assets/css/main.css">
-    <title>메인화면</title>
-
+    <link rel="stylesheet" href="/assets/css/sign-up.css">
+    <title>회원가입</title>
 </head>
 <body>
     <div id="snowfall"></div>
-    <%--<jsp:include page="include/header.jsp"/>--%>
-    <div class="mainDiv">
-        <img id="santa" src="/assets/img/santaHat.png" alt="">
 
-        <form class="loginForm" action="" method="">
-            <div class="mainTitle">
-                <h1>안녕하세요? 반가워요!</h1>
-                <h4>즐거운 크리스마스 보내세요!</h4>
+    <div class="registerDiv">
+        <img id="santa" src="/assets/img/santaHat.png" alt="">
+        <form class="registerForm" action="" method="">
+            <div class="registerTitle">
+                <h2>계정 만들기</h2>
             </div>
             <div class="inputDiv">
                 <span class="inputText">아이디<span class="redStar">&nbsp;*</span></span>
                 <input id="inputDiv1" type="text" name="account">
+                <span class="inputText">이름<span class="redStar">&nbsp;*</span></span>
+                <input id="inputDiv2" type="text" name="account">
+                <span class="inputText">이메일<span class="redStar">&nbsp;*</span></span>
+                <input id="inputDiv3" type="email" name="email">
                 <span class="inputText">비밀번호<span class="redStar">&nbsp;*</span></span>
-                <input id="inputDiv2" type="password" name="password">
+                <input id="inputDiv4" type="password" name="password">
             </div>
-            <div class="enterDiv">
-                <a href="#">비밀번호가 생각나지 않나요?</a>
-            </div>
-            <button id="loginBtn" type="submit"> 로그인 </button>
-            <div class="regiDiv">
-                아직 가입하시지 않으셨나요? <a href="/sign-up">계정만들기</a>
+            <button id="registerBtn" type="submit"> 회원가입 </button>
+            <div class="goLogin">
+                <a href="/">로그인 화면으로 돌아가기</a>
             </div>
         </form>
-        <div class="newsDiv">
-
-        </div>
 
     </div>
     <script>
