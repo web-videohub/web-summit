@@ -1,6 +1,17 @@
 package com.teamrocket.summit.dto;
 
+import lombok.*;
+
+import javax.validation.constraints.NotBlank;
+
+@Getter @Setter @ToString
+@EqualsAndHashCode
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class DirectMessageDTO {
-    private String user1;
-    private String user2;
+    @NotBlank
+    private String user1Account;
+    @NotBlank
+    private String user2Account;
 }

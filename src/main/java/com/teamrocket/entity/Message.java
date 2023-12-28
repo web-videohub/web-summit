@@ -4,13 +4,13 @@ import lombok.*;
 
 import java.time.LocalDateTime;
 
-@Getter @ToString
+@Setter @Getter @ToString
 @EqualsAndHashCode
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
 public class Message {
-    private String dm_id;
+    private String dmId;
     private String content;
-    private LocalDateTime message_time;
+    private LocalDateTime messageTime;
 }

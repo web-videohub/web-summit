@@ -1,0 +1,20 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.teamrocket.summit.repository.DirectMessageInfoRepository">
+    
+    <insert id="save">
+        INSERT INTO tbl_direct_message_content
+        (dm_id, sender_account, content)
+        VALUES
+        (#{dmId}, #{senderAccount}, #{content})
+    </insert>
+    
+    <select id="messageList" resultType="directMessageInfo">
+        SELECT * FROM tbl_direct_message_content
+        WHERE dm_id = #{dmId}
+        ORDER BY message_time asc
+    </select>
+
+</mapper>

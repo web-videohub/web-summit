@@ -8,14 +8,14 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/api/v1")
 @RequiredArgsConstructor
 @Slf4j
 public class ChatController {
 
     // 채팅방 메세지 조회
-    @GetMapping("/chat/{dmId}/messages")
+    @GetMapping("/chat/{dmId}")
     public ResponseEntity<?> chatDM(@PathVariable int dmId) {
+        log.info("/chat/");
 
         return null;
     }
@@ -29,26 +29,20 @@ public class ChatController {
 
     // 메세지 전송
     @PostMapping("/chat/{dmId}/messages")
-    public ResponseEntity<?> sendMessage(@Validated @RequestBody int dmId
-    , BindingResult result) {
-        if(result.hasErrors()) {
-            return ResponseEntity
-                    .badRequest()
-                    .body(result.toString())
-                    ;
-        }
+    public String sendMessage(@Validated @RequestBody int dmId) {
 
-        log.info("/api/v1/chat : POST");
+        log.info("chat : POST");
         log.debug("request parameter : {}", dmId);
 
         return null;
     }
 
     // 채팅방 목록 조회
-    @GetMapping("/rooms")
-    public ResponseEntity<?> roomList() {
-        log.info("/api/v1/chat/room ");
-        return null;
+    @GetMapping("/chat")
+    public String roomList() {
+        log.info("/chat GET!");
+
+        return "index";
     }
 
 }
