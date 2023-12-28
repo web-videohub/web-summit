@@ -1,0 +1,23 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.teamrocket.summit.repository.MessageMapper">
+
+    <insert id="send">
+        INSERT INTO tbl_direct_message_content
+        (messageId, dmId, content)
+    </insert>
+
+    <update id="modify">
+        UPDATE tbl_message
+        SET content = #{content}
+        WHERE id=#{messageId}
+    </update>
+
+    <delete id="delete">
+        DELETE FROM tbl_message
+        WHERE message_id = #{messageId}
+    </delete>
+
+</mapper>
