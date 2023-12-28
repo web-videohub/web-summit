@@ -11,5 +11,11 @@ public class AppController {
         return "/members/sign-in";
     }
 
+    @GetMapping("/channels/@me")
+    public String mainScreen() {
+
+        return "/channels-me";
+    }
+
 
 }
