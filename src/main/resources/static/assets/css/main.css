@@ -27,6 +27,8 @@ a {
     flex-direction: row;
     width: 950px;
     height: 600px;
+    max-height: 600px;
+    min-height: 600px;
     /*
     background-color: #496d8c;
      */
@@ -65,6 +67,9 @@ a {
     font-size: 20px;
     font-weight: bold;
 }
+.inputDiv input:hover {
+    filter: drop-shadow(0 0 10px #8e8f8c);
+}
 #inputDiv1 {
     margin-bottom: 10px;
 }
@@ -77,6 +82,13 @@ a {
     font-size: 20px;
     font-weight: bold;
     margin: 0 auto;
+}
+#loginBtn:hover {
+    transition: 0.2s ease-out;
+    background-color: #1e6249;
+}
+#loginBtn:not(:hover) {
+    transition: 0.2s ease-out;
 }
 
 .regiDiv {
@@ -122,7 +134,9 @@ a {
     margin: 20px auto 20px;
     font-size: 17px;
     font-weight: bold;
-
+}
+a:hover {
+    text-decoration: 1px #0080FF underline;
 }
 .redStar {
     font-size: 17px;

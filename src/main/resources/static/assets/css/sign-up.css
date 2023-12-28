@@ -19,6 +19,9 @@ a {
     font-size: 17px;
     color: #0080FF
 }
+a:hover {
+    text-decoration: 1px #0080FF underline;
+}
 .registerForm {
     display: flex;
     margin: 0 auto 20px;
@@ -49,6 +52,8 @@ a {
     flex-direction: row;
     width: 500px;
     height: 700px;
+    max-height: 700px;
+    min-height: 700px;
     /*
     background-color: #496d8c;
      */
@@ -74,6 +79,13 @@ a {
     font-weight: bold;
     margin: 0 auto;
 }
+#registerBtn:hover {
+    transition: 0.2s ease-out;
+    background-color: #1e6249;
+}
+#registerBtn:not(:hover) {
+    transition: 0.2s ease-out;
+}
 .inputText {
     color: #a6acb1;
     font-size: 17px;
@@ -95,6 +107,9 @@ a {
 }
 .inputDiv input {
     margin-bottom: 10px;
+}
+.inputDiv input:hover {
+    filter: drop-shadow(0 0 10px #8e8f8c);
 }
 .inputDiv #inputDiv4 {
     margin-bottom: 25px;
