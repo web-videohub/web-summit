@@ -13,7 +13,7 @@
 
     <select id="findMember" resultType="com.teamrocket.summit.entity.Member">
         SELECT
-            user_account, user_name, user_email, user_password, user_regDate
+            user_account, user_name, user_email, user_password, user_auth, user_regDate
         FROM tbl_member
         WHERE user_account = #{userAccount}
     </select>
