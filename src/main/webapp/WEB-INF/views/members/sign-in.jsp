@@ -27,7 +27,7 @@
             <input id="inputDiv2" type="password" name="userPassword">
         </div>
         <div class="enterDiv">
-            <a href="#">비밀번호가 생각나지 않나요?</a>
+            <a href="/find-pw">비밀번호가 생각나지 않나요?</a>
         </div>
         <input id="loginBtn" type="submit" value="로그인"/>
         <div class="regiDiv">

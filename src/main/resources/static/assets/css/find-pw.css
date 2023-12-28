@@ -19,16 +19,41 @@ a {
     font-size: 17px;
     color: #0080FF
 }
-.mainDiv {
+a:hover {
+    text-decoration: 1px #0080FF underline;
+}
+.findPasswordForm {
+    display: flex;
+    margin: 0 auto 20px;
+    flex-direction: column;
+    width: 60vh;
+    justify-content: center;
+    align-content: center;
+}
+.inputDiv {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+.inputDiv input {
+    width: 400px;
+    height: 40px;
+    background-color: #1e2026;
+    border-radius: 10px;
+    color: aliceblue;
+    font-size: 20px;
+    font-weight: bold;
+}
+.findPasswordDiv {
     margin: 100px auto;
     display: flex;
     justify-content: center;
     align-content: center;
     flex-direction: row;
-    width: 950px;
+    width: 500px;
     height: 600px;
-    max-height: 600px;
     min-height: 600px;
+    max-height: 600px;
     /*
     background-color: #496d8c;
      */
@@ -44,36 +69,7 @@ a {
     position: relative;
     animation: fadeInDown 1.5s;
 }
-.loginForm {
-    display: flex;
-    margin: 0 auto 20px;
-    flex-direction: column;
-    width: 60vh;
-    justify-content: center;
-    align-content: center;
-}
-
-.inputDiv {
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-}
-.inputDiv input {
-    width: 400px;
-    height: 40px;
-    background-color: #1e2026;
-    border-radius: 10px;
-    color: aliceblue;
-    font-size: 20px;
-    font-weight: bold;
-}
-.inputDiv input:hover {
-    filter: drop-shadow(0 0 10px #8e8f8c);
-}
-#inputDiv1 {
-    margin-bottom: 10px;
-}
-#loginBtn {
+#findPasswordBtn {
     width: 400px;
     height: 50px;
     background-color: #2a8c68;
@@ -83,37 +79,46 @@ a {
     font-weight: bold;
     margin: 0 auto;
 }
-#loginBtn:hover {
+#findPasswordBtn:hover {
     transition: 0.2s ease-out;
     background-color: #1e6249;
 }
-#loginBtn:not(:hover) {
+#findPasswordBtn:not(:hover) {
     transition: 0.2s ease-out;
 }
-
-.regiDiv {
-    width: 400px;
-    font-weight: bold;
-    color: rgba(240, 248, 255, 0.52);
+.inputText {
+    color: #a6acb1;
     font-size: 17px;
-    margin: 20px auto 0;
+    font-weight: bold;
+    margin-bottom: 5px;
 }
-.mainTitle {
+.redStar {
+    font-size: 17px;
+    font-weight: bold;
+    color: red;
+}
+.findPasswordTitle {
     color: aliceblue;
     font-size: 20px;
     font-weight: bold;
-    margin-top: -80px;
-    text-align: center;
-    margin-bottom: 0;
-}
-.mainTitle h1 {
-    margin-bottom: 5px;
-}
-.mainTitle h4 {
     margin-top: 0;
-    font-size: 20px;
     text-align: center;
-    color: #969ba1;
+    margin-bottom: 30px;
+}
+.inputDiv input {
+    margin-bottom: 10px;
+}
+.inputDiv input:hover {
+    filter: drop-shadow(0 0 10px #8e8f8c);
+}
+.inputDiv #inputDiv3 {
+    margin-bottom: 25px;
+}
+.goLogin {
+    width: 400px;
+    font-weight: bold;
+    font-size: 17px;
+    margin: 5px auto 0;
 }
 #santa {
     align-content: center;
@@ -123,39 +128,6 @@ a {
     top: -110px;
     right: -70px;
 }
-.inputText {
-    color: aliceblue;
-    font-size: 17px;
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-.enterDiv {
-    width: 400px;
-    margin: 20px auto 20px;
-    font-size: 17px;
-    font-weight: bold;
-}
-a:hover {
-    text-decoration: 1px #0080FF underline;
-}
-.redStar {
-    font-size: 17px;
-    font-weight: bold;
-    color: red;
-}
-.newsDiv {
-    width: 400px;
-    height: 100%;
-    background-color: #637ad3;
-    border-radius: 25px;
-
-    text-align: center;
-}
-
-
-
-
-
 
 
 /* 키프레임 애니메이션 */
@@ -169,7 +141,6 @@ a:hover {
         /*transform: translateZ(0);*/
     }
 }
-
 
 /*눈내리기*/
 #snowfall {

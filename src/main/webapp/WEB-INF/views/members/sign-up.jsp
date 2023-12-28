@@ -178,7 +178,6 @@
                 $pwChk.innerHTML = '';
                 checkResultList[3] = true;
                 console.log(checkResultList);
-
             }
         };
     })();

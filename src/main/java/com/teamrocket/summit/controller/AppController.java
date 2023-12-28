@@ -10,5 +10,4 @@ public class AppController {
 
         return "/members/sign-in";
     }
-
 }
