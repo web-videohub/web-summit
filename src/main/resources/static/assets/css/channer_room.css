@@ -1,6 +1,9 @@
 .back_bg {
     background-color: #1E2026;
 }
+::-webkit-scrollbar {
+    display: none;
+}
 .container {
     display: flex;
     flex-wrap: wrap;
@@ -8,47 +11,56 @@
 }
 .container_group {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     float: left;
 }
 .box1 {
     background-color: #496D8C;
-    width: 700px;
-    height: 500px;
+    width: 300px;
+    height: 900px;
     border: 2px solid transparent;
-    border-radius: 30px;
     background-image: linear-gradient(#323640, #4E5463),
     linear-gradient(to right, #2A8C68 0%, #367E7F 50%, #04BF68 100%);
     background-origin: border-box;
     background-clip: content-box, border-box;
 }
-
 .box2 {
-    float: left;
     background-color: #496D8C;
-    width: 300px;
-    height: 800px;
-    margin: 50px;
+    width: 900px;
+    height: 900px;
     border: 2px solid transparent;
-    border-radius: 30px;
-    background-image: linear-gradient(#747D94, #747D94),
-    linear-gradient(to right, #04BF68 0%, #73FBFD 50%, #2A8C68 100%);
-    background-origin: border-box;
-    background-clip: content-box, border-box;
-}
-.box3 {
-    background-color: #1E2026;
-    width: 700px;
-    height: 250px;
-    margin-top: 40px;
-    border: 2px solid transparent;
-    border-radius: 30px;
     background-image: linear-gradient(#323640, #4E5463),
-    linear-gradient(to right, #08A65C 0%, #367E7F 50%, #04BF68 100%);
+    linear-gradient(to right, #2A8C68 0%, #367E7F 50%, #04BF68 100%);
     background-origin: border-box;
     background-clip: content-box, border-box;
 }
+.menu {
+    color: #FFFFFF;
+    width: 300px;
+    height: 50px;
+    background-color: #5A6173;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.channer_group .channer {
+    color: #FFFFFF;
+    width: 50px;
+    height: 850px;
+    background-color: #646C80;
+    float: left;
+    display: flex;
+    flex-direction: column;
+}
+.channer_group .userlist {
+    color: #FFFFFF;
+    width: 250px;
+    height: 850px;
+    background-color: #6C748A;
+    float: left;
+}
+
+/* 채팅창 CSS부분 */
 
 /* 텍스트 입력창 CSS (메시지 전송 버튼 포함) */
 .form-control {
@@ -61,6 +73,7 @@
 input {
     padding-left: 10px;
     outline: none;
+    float: left;
 }
 
 button {
@@ -95,7 +108,7 @@ button.primary {
 #messageForm .input-group button {
     width: 80px;
     height: 40px;
-    transform: translate(194px, -100%);
+    /*transform: translate(194px, -100%);*/
 }
 
 /* 채팅창 body CSS */
@@ -127,6 +140,11 @@ button.primary {
     height: calc(100%);
 }
 
+/* 패딩 : 위 | 오른쪽 | 아래 | 왼쪽 */
+#chat-page #messageForm {
+    padding: 10px 0px 10px 0px;
+}
+
 /* 스크롤 바 디자인 CSS */
 ul::-webkit-scrollbar {
     width: 5px;
@@ -141,9 +159,6 @@ ul::-webkit-scrollbar-thumb {
 ul::-webkit-scrollbar-button {
     width: 0;
     height: 0;
-}
-#chat-page #messageForm {
-    padding: 20px;
 }
 
 /* 실시간 채팅 머리 부분 (방 이름 텍스트 밑에 선이 따로 포함되어 있으니 주의하시오.) */

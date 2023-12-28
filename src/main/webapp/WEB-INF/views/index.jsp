@@ -1,68 +1,63 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>Web Study</title>
-    <style>
-        .test1 {
-            background-color: #1E2026;
-        }
-        .test2 {
-            float: left;
-            background-color: #496D8C;
-            width: 700px;
-            height: 500px;
-            margin-top: 50px;
-            border: 2px solid transparent;
-            border-radius: 30px;
-            background-image: linear-gradient(#323640, #4E5463),
-            linear-gradient(to right, #2A8C68 0%, #04BF68 100%);
-            background-origin: border-box;
-            background-clip: content-box, border-box;
-        }
-        /**/
-        .test3 {
-            color: white;
-            background-color: #FFFFFF;
-            width: auto;
-            height: 120px;
-            margin-top: 650px;
-        }
-        .test4 {
-            color: black;
-            float: left;
-            background-color: #496D8C;
-            width: 300px;
-            height: 800px;
-            margin: 50px;
-            border: 2px solid transparent;
-            border-radius: 30px;
-            background-image: linear-gradient(#747D94, #747D94),
-            linear-gradient(to right, #04BF68 0%, #2A8C68 100%);
-            background-origin: border-box;
-            background-clip: content-box, border-box;
-        }
-        .test5 {
-            color: white;
-            clear: both;
-            background-color: #1E2026;
-            width: 700px;
-            height: 250px;
-            transform: translate(0, -120%);
-            border: 2px solid transparent;
-            border-radius: 30px;
-            background-image: linear-gradient(#323640, #4E5463),
-            linear-gradient(to right, #08A65C 0%, #04BF68 100%);
-            background-origin: border-box;
-            background-clip: content-box, border-box;
-        }
-    </style>
+    <title>Ch.?</title>
+    <link rel="stylesheet" href="/assets/css/channer_room.css">
+    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
 </head>
-<body class="test1">
-<div class="test2"></div>
-<div class="test4">
-    <div class="test3"></div>
-</div>
-<div class="test5"></div>
+
+<body class="back_bg">
+    <div class="container">
+        <div class="container_group">
+            <div class="box1">
+                <div class="menu">
+                    Channer name
+                    <span class="lnr lnr-chevron-down"></span>
+                </div>
+                <div class="channer_group">
+                    <div class="channer">
+                        <img src="channer_profile.png">
+                        <img src="channer_profile.png">
+                        <img src="channer_profile.png">
+                    </div>
+                    <div class="userlist">
+                        <p>참여자 1</p>
+                        <p>참여자 2</p>
+                    </div>
+                </div>
+            </div>
+            <div class="box2">
+                <div id="chat-page" class="hidden">
+                    <div class="chat-container">
+                        <div class="chat-header">
+                            <h2>Ch.? Room</h2>
+                        </div>
+                        <!-- messageArea는 채팅 내역이 들어갈 곳이다.-->
+                        <ul id="messageArea">
+                            <li>
+                                <a href="#"><img src="profile.png">nickname</a>
+                                <p>just do it.</p>
+                            </li>
+                            <li class="mychat">
+                                <a href="#"><img src="profile.png">nickname</a>
+                                <p>just do it.</p>
+                            </li>
+                        </ul>
+                        <form id="messageForm" name="messageForm">
+                            <div class="form-group">
+                                <div class="input-group clearfix">
+                                    <input type="text" id="message" placeholder="Type a message..." autocomplete="off" class="form-control"/>
+                                    <button type="submit" class="primary">Send</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
