@@ -12,4 +12,11 @@ public class AppController {
         return "index";
     }
 
+    @RequestMapping("/channel")
+    public String channel() {
+        System.out.println("Channel Room.");
+
+        return "channel_room";
+    }
+
 }

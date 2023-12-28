@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Ch.?</title>
-    <link rel="stylesheet" href="/assets/css/channer_room.css">
+    <link rel="stylesheet" href="/assets/css/channel_room.css">
     <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
 </head>
 
@@ -14,14 +14,14 @@
         <div class="container_group">
             <div class="box1">
                 <div class="menu">
-                    Channer name
+                    Channel name
                     <span class="lnr lnr-chevron-down"></span>
                 </div>
-                <div class="channer_group">
-                    <div class="channer">
-                        <img src="channer_profile.png">
-                        <img src="channer_profile.png">
-                        <img src="channer_profile.png">
+                <div class="channel_group">
+                    <div class="channel">
+                        <img src="channel_profile.png">
+                        <img src="channel_profile.png">
+                        <img src="channel_profile.png">
                     </div>
                     <div class="userlist">
                         <p>참여자 1</p>
