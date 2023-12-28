@@ -25,6 +25,8 @@
                 <input id="inputDiv3" type="email" name="email">
                 <span class="inputText">비밀번호<span class="redStar">&nbsp;*</span></span>
                 <input id="inputDiv4" type="password" name="password">
+                <span class="inputText">비밀번호 확인<span class="redStar">&nbsp;*</span></span>
+                <input id="inputDiv5" type="password" name="password">
             </div>
             <button id="registerBtn" type="submit"> 회원가입 </button>
             <div class="goLogin">
