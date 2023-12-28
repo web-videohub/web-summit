@@ -13,22 +13,31 @@
             <button class="meBtn" type="button"></button>
             <span class="makeLine"></span>
 
-            <div class="serverList">
-                <div class="selectedEffect"></div>
-                <button type="button" class="server"></button>
+            <div class="servers">
+                <div class="serverList">
+                    <div class="selectedEffect"></div>
+                    <button type="button" class="server"></button>
+                </div>
+                <div class="serverList">
+                    <div class="selectedEffect"></div>
+                    <button type="button" class="server"></button>
+                </div>
             </div>
-            <div class="serverList">
-                <div class="selectedEffect"></div>
-                <button type="button" class="server"></button>
-            </div>
-            <div class="serverList">
-                <div class="selectedEffect"></div>
-                <button type="button" class="server"></button>
-            </div>
-        </div>
-        <div class="messageListDiv">
 
         </div>
+
+
+        <div class="dmsgListDiv">
+            <button class="startDM" type="button">다이렉트 메세지 시작하기</button>
+            <div class="dmsgs">
+                <div class="dmsgList">
+                    <button type="button" class="dmsg">김다빈</button>
+                </div>
+            </div>
+        </div>
+
+
+
         <div class="friendListDiv">
 
         </div>
