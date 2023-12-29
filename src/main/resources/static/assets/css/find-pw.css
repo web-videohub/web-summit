@@ -30,12 +30,15 @@ a:hover {
     justify-content: center;
     align-content: center;
 }
-.inputDiv {
+.inputDiv,
+.modifyPw {
     display: flex;
     flex-direction: column;
     margin: 0 auto;
 }
-.inputDiv input {
+
+.inputDiv input,
+.modifyPw input {
     width: 400px;
     height: 40px;
     background-color: #1e2026;
@@ -44,6 +47,11 @@ a:hover {
     font-size: 20px;
     font-weight: bold;
 }
+
+.modifyPw {
+    padding-bottom: 10px;
+}
+
 .findPasswordDiv {
     margin: 100px auto;
     display: flex;

@@ -21,10 +21,12 @@
             <input id="inputDiv1" type="text" name="account">
             <span class="inputText">당신의 이메일<span class="redStar">&nbsp;*</span></span>
             <input id="inputDiv2" type="email" name="email">
+        </div>
+        <div class="modifyPw">
             <span class="inputText">당신의 비밀번호는</span>
             <input id="inputDiv3" type="password" placeholder="안보이다가 검증완료하면 나타남">
         </div>
-        <button id="findPasswordBtn" type="submit"> 비밀번호 찾기 </button>
+        <button id="findPasswordBtn" type="submit"> 비밀번호 찾기</button>
         <div class="goLogin">
             <a href="/">로그인 화면으로 돌아가기</a>
         </div>
@@ -32,7 +34,41 @@
 
 </div>
 <script>
-    document.addEventListener("DOMContentLoaded", function() {
+
+    const checkResultList = [false, false];
+
+    (function () {
+        const $idInput = document.getElementById('inputDiv1');
+        const $emailInput = document.getElementById('inputDiv2');
+
+        $idInput.onkeyup = e => {
+            const idValue = $idInput.value;
+
+            console.log(idValue);
+
+            fetch('/check?type=account&keyword=' + idValue)
+                .then(res => res.json())
+                .then(flag => {
+                    checkResultList[0] = flag;
+                    console.log(checkResultList);
+                });
+        };
+
+        $emailInput.onkeyup = e => {
+            const emailValue = $emailInput.value;
+            const idValue = $idInput.value;
+
+            fetch('/modify?account=' + idValue + '&keyword=' + emailValue)
+                .then(res => res.json())
+                .then(flag => {
+                    checkResultList[1] = flag;
+                    console.log(checkResultList);
+                });
+        };
+    })();
+
+
+    document.addEventListener("DOMContentLoaded", function () {
         const snowfallContainer = document.getElementById("snowfall");
 
         // 눈송이 뿌리기

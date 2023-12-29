@@ -76,25 +76,21 @@ public class MemberController {
         return ResponseEntity.ok().body(flag);
     }
 
+
+    @GetMapping("/modify")
+    @ResponseBody
+    public ResponseEntity<?> consistent(String keyword, String id) {
+        boolean flag = memberService.checkConsistentValue(keyword, id);
+        log.debug("Consistency check result: {}", flag);
+        return ResponseEntity.ok().body(flag);
+    }
+
     @PostMapping("/register")
     public String register(SignUpRequestDTO dto) {
         log.info("parameter : {}", dto);
 
         boolean flag = memberService.join(dto);
         return flag ? "redirect:/" : "redirect:/login";
-    }
-
-    @GetMapping("/register")
-    public String register() {
-        System.out.println("회원가입 화면");
-
-        return "/members/sign-up";
-    }
-    @PostMapping("/register")
-    public String signUp() {
-        System.out.println("회원가입 처리");
-
-        return "";
     }
 
     @GetMapping("/find-pw")

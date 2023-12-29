@@ -19,4 +19,6 @@ public interface MemberMapper {
      * @return 중복이면 true, 중복이 아니면 false
      */
     boolean isDuplicate(@Param("type") String type, @Param("keyword") String keyword);
+
+    boolean isConsistent(@Param("account") String account, @Param("keyword") String keyword);
 }
