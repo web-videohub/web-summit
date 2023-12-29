@@ -17,6 +17,8 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import static com.teamrocket.summit.service.LoginResult.SUCCESS;
+
 @Controller
 @Slf4j
 @RequiredArgsConstructor
@@ -28,7 +30,7 @@ public class MemberController {
     public String login() {
         log.info("/login GET : forwarding to login.jsp");
 
-        return "index";
+        return "members/sign-in";
     }
 
     @PostMapping("/login")
@@ -47,16 +49,16 @@ public class MemberController {
 
         ra.addFlashAttribute("msg", result);
 
-        if(result == LoginResult.SUCCESS) {  // 로그인 성공시
+        if(result == SUCCESS) {  // 로그인 성공시
 
             //makeLoginCookie(dto, response);  // 쿠키로 로그인 유지
             log.info("여기로 오긴함?");
             // 세션으로 로그인 유지
             memberService.maintainLoginState(request.getSession(), dto.getUserAccount());
 
-            return "channels-me";
+            return "redirect:/";
         }
-        return ""; // 로그인 실패시
+        return "redirect:/login"; // 로그인 실패시
 
     }
 

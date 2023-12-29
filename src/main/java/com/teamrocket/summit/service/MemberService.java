@@ -14,6 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import static com.teamrocket.summit.service.LoginResult.*;
+import static com.teamrocket.summit.util.LoginUtils.LOGIN_KEY;
 
 @Service
 @Slf4j
@@ -68,7 +69,7 @@ public class MemberService {
                 .auth(member.getUserAuth().name())
                 .build();
 
-        session.setAttribute("login", dto);
+        session.setAttribute(LOGIN_KEY, dto);
         session.setMaxInactiveInterval(60 * 60);
     }
 

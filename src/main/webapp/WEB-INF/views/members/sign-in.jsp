@@ -15,7 +15,7 @@
 <div class="mainDiv">
     <img id="santa" src="/assets/img/santaHat.png" alt="">
 
-    <form class="loginForm" action="/login" method="POST">
+    <form class="loginForm" action="/login" method="post">
         <div class="mainTitle">
             <h1>안녕하세요? 반가워요!</h1>
             <h4>즐거운 크리스마스 보내세요!</h4>
@@ -29,7 +29,7 @@
         <div class="enterDiv">
             <a href="/find-pw">비밀번호가 생각나지 않나요?</a>
         </div>
-        <input id="loginBtn" type="submit" value="로그인"/>
+        <input id="loginBtn" type="submit" value="로그인">
         <div class="regiDiv">
             아직 가입하시지 않으셨나요? <a href="/register">계정만들기</a>
         </div>
@@ -54,7 +54,7 @@
     });
 
 
-    const serverMessage = '${msg}}';
+    const serverMessage = '${msg}';
     console.log('msg : ' + serverMessage);
 
     if (serverMessage === 'NO_ACC') {

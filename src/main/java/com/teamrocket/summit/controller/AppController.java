@@ -1,14 +1,20 @@
 package com.teamrocket.summit.controller;
 
+import com.teamrocket.summit.util.LoginUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
+
+import javax.servlet.http.HttpSession;
 
 @Controller
 public class AppController {
     @GetMapping("/")
-    public String redirectToLogin() {
+    public String redirectToLogin(HttpSession session) {
 
-        return "/members/sign-in";
+        if (!LoginUtils.isLogin(session)) {
+            return "redirect:/login";
+        }
+        return "redirect:/channels/@me";
     }
 
     @GetMapping("/channels/@me")
