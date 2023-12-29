@@ -5,11 +5,9 @@ import org.springframework.web.bind.annotation.*;
 
 @Controller
 public class AppController {
-    @RequestMapping("/")
-    public String home() {
-        System.out.println("어서오셈");
+    @GetMapping("/")
+    public String redirectToLogin() {
 
-        return "index";
+        return "/members/sign-in";
     }
-
 }
