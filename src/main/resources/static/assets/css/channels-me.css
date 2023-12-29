@@ -103,6 +103,13 @@ body {
     margin: 0 auto;
     background: #b03939;
 }
+.profileDiv {
+    position: absolute;
+    bottom: 0px;
+    width: 250px;
+    height: 60px;
+    background: white;
+}
 
 
 
@@ -116,4 +123,14 @@ body {
     width: 100%;
     height: 100%;
     background: #3a3e48;
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+    flex-direction: column;
+    color: aliceblue;
+}
+.friendFilterDiv {
+    width: 100%;
+    height: 60px;
+    background: green;
 }
