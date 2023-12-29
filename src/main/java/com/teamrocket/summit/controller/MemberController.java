@@ -50,11 +50,11 @@ public class MemberController {
         if(result == LoginResult.SUCCESS) {  // 로그인 성공시
 
             //makeLoginCookie(dto, response);  // 쿠키로 로그인 유지
-
+            log.info("여기로 오긴함?");
             // 세션으로 로그인 유지
             memberService.maintainLoginState(request.getSession(), dto.getUserAccount());
 
-            return "redirect:/";
+            return "channels-me";
         }
         return ""; // 로그인 실패시
 
