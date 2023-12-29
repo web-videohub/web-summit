@@ -14,6 +14,12 @@
             <span class="makeLine"></span>
 
             <div class="servers">
+                <c:forEach var="s" items="${sList}">
+                    <div class="serverList">
+                        <div class="selectedEffect"></div>
+                        <button type="button" class="server" name="${s.serverName}"></button>
+                    </div>
+                </c:forEach>
                 <div class="serverList">
                     <div class="selectedEffect"></div>
                     <button type="button" class="server"></button>
@@ -30,19 +36,29 @@
         <div class="dmsgListDiv">
             <button class="startDM" type="button">다이렉트 메세지 시작하기</button>
             <div class="dmsgs">
+                <c:forEach var="m" items="${mList}">
+                    <div class="dmsgList">
+                        <button type="button" class="dmsg" name="${m.dms}">김다빈</button>
+                    </div>
+                </c:forEach>
                 <div class="dmsgList">
                     <button type="button" class="dmsg">김다빈</button>
                 </div>
-            </div>
-            <div class="dmsgs">
                 <div class="dmsgList">
                     <button type="button" class="dmsg">김다빈</button>
                 </div>
+
             </div>
 
+
             <div class="profileDiv">
-<%--                ${login.nickName}--%>
-                사용자이름
+                <span>프사</span>
+<%--                ${login.profileIMG}
+                    ${login.nickName}
+                    ${login.state}
+--%>
+                <span>사용자이름</span>
+                <span>온라인</span>
             </div>
         </div>
 
@@ -74,6 +90,23 @@
     </div>
 
 <script>
+    // 서버클릭시 selectedEffect 작동
+    let $servers = document.querySelectorAll('.server');
+    let $selectedEffects = document.querySelectorAll('.selectedEffect');
+    $servers.forEach($server => {
+        $server.addEventListener("click", e => {
+            $selectedEffects.forEach($selectedEffect => {
+                $selectedEffect.style.display = 'none';
+            });
+
+            let $serverList = $server.closest('.serverList'); // 수정된 부분
+            let $selectedEffect = $serverList.querySelector('.selectedEffect');
+
+            $selectedEffect.style.display = 'flex';
+        });
+    });
+
+
 
     // 서버목록 렌더링
 

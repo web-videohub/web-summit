@@ -28,7 +28,6 @@ body {
     background: #2a8c68;
     margin: 10px auto;
     border-radius: 10px;
-    border: 0;
 }
 .makeLine {
     width: 50px;
@@ -46,6 +45,7 @@ body {
     padding-top: 10px;
 }
 .selectedEffect {
+    display: none;
     width: 5px;
     height: 40px;
     background: white;
@@ -59,7 +59,6 @@ body {
     background: #b03939;
     margin: auto;
     border-radius: 30px;
-    border: 0;
 }
 
 
