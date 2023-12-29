@@ -30,12 +30,15 @@ a:hover {
     justify-content: center;
     align-content: center;
 }
-.inputDiv {
+.inputDiv,
+.modifyPw {
     display: flex;
     flex-direction: column;
     margin: 0 auto;
 }
-.inputDiv input {
+
+.inputDiv input,
+.modifyPw input {
     width: 400px;
     height: 40px;
     background-color: #1e2026;
@@ -44,6 +47,11 @@ a:hover {
     font-size: 20px;
     font-weight: bold;
 }
+
+.modifyPw {
+    padding-bottom: 10px;
+}
+
 .findPasswordDiv {
     margin: 100px auto;
     display: flex;
@@ -69,7 +77,8 @@ a:hover {
     position: relative;
     animation: fadeInDown 1.5s;
 }
-#findPasswordBtn {
+#findPasswordBtn,
+#modifyBtn {
     width: 400px;
     height: 50px;
     background-color: #2a8c68;
@@ -79,11 +88,13 @@ a:hover {
     font-weight: bold;
     margin: 0 auto;
 }
-#findPasswordBtn:hover {
+#findPasswordBtn:hover,
+#modifyBtn:hover {
     transition: 0.2s ease-out;
     background-color: #1e6249;
 }
-#findPasswordBtn:not(:hover) {
+#findPasswordBtn:not(:hover),
+#modifyBtn:not(:hover){
     transition: 0.2s ease-out;
 }
 .inputText {

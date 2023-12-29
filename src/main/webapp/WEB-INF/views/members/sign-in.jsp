@@ -22,14 +22,14 @@
         </div>
         <div class="inputDiv">
             <span class="inputText">아이디<span class="redStar">&nbsp;*</span></span>
-            <input id="inputDiv1" type="text" name="account">
+            <input id="inputDiv1" type="text" name="userAccount">
             <span class="inputText">비밀번호<span class="redStar">&nbsp;*</span></span>
-            <input id="inputDiv2" type="password" name="password">
+            <input id="inputDiv2" type="password" name="userPassword">
         </div>
         <div class="enterDiv">
             <a href="/find-pw">비밀번호가 생각나지 않나요?</a>
         </div>
-        <button id="loginBtn" type="submit"> 로그인 </button>
+        <input id="loginBtn" type="submit" value="로그인"/>
         <div class="regiDiv">
             아직 가입하시지 않으셨나요? <a href="/register">계정만들기</a>
         </div>
@@ -52,6 +52,16 @@
             snowfallContainer.appendChild(snowflake);
         }
     });
+
+
+    const serverMessage = '${msg}}';
+    console.log('msg : ' + serverMessage);
+
+    if (serverMessage === 'NO_ACC') {
+        alert("회원가입을 해주세요");
+    } else if(serverMessage === 'NO_PW') {
+        alert("비밀번호가 틀렸습니다.")
+    }
 </script>
 </body>
 </html>
