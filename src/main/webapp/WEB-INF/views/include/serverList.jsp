@@ -4,7 +4,7 @@
 <html lang="ko">
 <div class="serverListDiv">
     <div class="serverList">
-        <div class="selectedEffect"></div>
+        <div class="selectedEffect" style="display: flex"></div>
         <button class="server meBtn" type="button"></button>
     </div>
     <span class="makeLine"></span>
