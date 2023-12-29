@@ -9,30 +9,7 @@
 </head>
 <body>
     <div class="mainDiv">
-        <div class="serverListDiv">
-            <button class="meBtn" type="button"></button>
-            <span class="makeLine"></span>
-
-            <div class="servers">
-                <c:forEach var="s" items="${sList}">
-                    <div class="serverList">
-                        <div class="selectedEffect"></div>
-                        <button type="button" class="server" name="${s.serverName}"></button>
-                    </div>
-                </c:forEach>
-                <div class="serverList">
-                    <div class="selectedEffect"></div>
-                    <button type="button" class="server"></button>
-                </div>
-                <div class="serverList">
-                    <div class="selectedEffect"></div>
-                    <button type="button" class="server"></button>
-                </div>
-            </div>
-
-        </div>
-
-
+        <jsp:include page="include/serverList.jsp"/>
         <div class="dmsgListDiv">
             <button class="startDM" type="button">다이렉트 메세지 시작하기</button>
             <div class="dmsgs">
@@ -54,7 +31,7 @@
             <div class="profileDiv">
                 <span>프사</span>
 <%--                ${login.profileIMG}
-                    ${login.nickName}
+                    ${login.name}
                     ${login.state}
 --%>
                 <span>사용자이름</span>

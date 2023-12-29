@@ -22,7 +22,7 @@ body {
     align-content: center;
     flex-direction: column;
 }
-.meBtn {
+.serverListDiv .serverList .meBtn {
     width: 60px;
     height: 60px;
     background: #2a8c68;
