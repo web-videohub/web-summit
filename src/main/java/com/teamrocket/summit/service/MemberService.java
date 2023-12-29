@@ -76,8 +76,8 @@ public class MemberService {
         return memberMapper.isDuplicate(type, keyword);
     }
 
-    public boolean checkConsistentValue(String account, String keyword) {
-        return memberMapper.isConsistent(account, keyword);
+    public boolean checkConsistentValue(String account, String email) {
+        return memberMapper.isConsistent(account, email);
     }
 
 }

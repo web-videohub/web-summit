@@ -30,11 +30,9 @@
     </select>
 
     <select id="isConsistent" resultType="boolean">
-        <![CDATA[
         SELECT COUNT(*)
         FROM tbl_member
-        WHERE user_account = #{account} AND user_email = #{keyword}
-    ]]>
+        WHERE user_account = #{account} AND user_email = #{email}
     </select>
 
 

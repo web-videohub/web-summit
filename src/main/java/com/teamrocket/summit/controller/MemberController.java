@@ -79,9 +79,10 @@ public class MemberController {
 
     @GetMapping("/modify")
     @ResponseBody
-    public ResponseEntity<?> consistent(String keyword, String id) {
-        boolean flag = memberService.checkConsistentValue(keyword, id);
-        log.debug("Consistency check result: {}", flag);
+    public ResponseEntity<?> consistent(String account, String email) {
+        log.info("member/modify{}{}", account, email);
+        boolean flag = memberService.checkConsistentValue(account, email);
+        log.info("중복체크 결과: {}", flag);
         return ResponseEntity.ok().body(flag);
     }
 

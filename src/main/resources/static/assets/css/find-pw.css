@@ -77,7 +77,8 @@ a:hover {
     position: relative;
     animation: fadeInDown 1.5s;
 }
-#findPasswordBtn {
+#findPasswordBtn,
+#modifyBtn {
     width: 400px;
     height: 50px;
     background-color: #2a8c68;
@@ -87,11 +88,13 @@ a:hover {
     font-weight: bold;
     margin: 0 auto;
 }
-#findPasswordBtn:hover {
+#findPasswordBtn:hover,
+#modifyBtn:hover {
     transition: 0.2s ease-out;
     background-color: #1e6249;
 }
-#findPasswordBtn:not(:hover) {
+#findPasswordBtn:not(:hover),
+#modifyBtn:not(:hover){
     transition: 0.2s ease-out;
 }
 .inputText {

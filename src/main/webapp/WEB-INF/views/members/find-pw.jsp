@@ -12,7 +12,7 @@
 
 <div class="findPasswordDiv">
     <img id="santa" src="/assets/img/santaHat.png" alt="">
-    <form class="findPasswordForm" action="/find-pw" method="POST">
+    <div class="findPasswordForm">
         <div class="findPasswordTitle">
             <h2>비밀번호 찾기</h2>
         </div>
@@ -22,27 +22,34 @@
             <span class="inputText">당신의 이메일<span class="redStar">&nbsp;*</span></span>
             <input id="inputDiv2" type="email" name="email">
         </div>
-        <div class="modifyPw">
+        <div class="modifyPw" style="display: none">
             <span class="inputText">당신의 비밀번호는</span>
             <input id="inputDiv3" type="password" placeholder="안보이다가 검증완료하면 나타남">
         </div>
-        <button id="findPasswordBtn" type="submit"> 비밀번호 찾기</button>
+        <input id="findPasswordBtn" type="button" value="아이디, 이메일 검증">
+        <input id="modifyBtn" type="button" value="비밀번호 변경" style="display: none">
         <div class="goLogin">
             <a href="/">로그인 화면으로 돌아가기</a>
         </div>
-    </form>
+    </>
 
 </div>
 <script>
 
     const checkResultList = [false, false];
+    const $modifyPw = document.querySelector(".modifyPw");
+    const $findBtn = document.getElementById('findPasswordBtn');
+    const $modifyBtn = document.getElementById('modifyBtn');
+
+    let idValue = "";
 
     (function () {
         const $idInput = document.getElementById('inputDiv1');
         const $emailInput = document.getElementById('inputDiv2');
 
+
         $idInput.onkeyup = e => {
-            const idValue = $idInput.value;
+             idValue = $idInput.value;
 
             console.log(idValue);
 
@@ -56,16 +63,36 @@
 
         $emailInput.onkeyup = e => {
             const emailValue = $emailInput.value;
-            const idValue = $idInput.value;
 
-            fetch('/modify?account=' + idValue + '&keyword=' + emailValue)
+            console.log(idValue);
+            fetch('/modify?account=' + idValue + '&email=' + emailValue)
                 .then(res => res.json())
                 .then(flag => {
                     checkResultList[1] = flag;
                     console.log(checkResultList);
                 });
         };
+
+        $findBtn.onclick = e => {
+            if(!checkResultList.includes(false)) {
+                $findBtn.style.display = 'none';
+                $modifyBtn.style.display = 'block';
+                $idInput.setAttribute("readonly", "true");
+                $idInput.style.borderColor = 'green';
+                $emailInput.setAttribute("readonly", "true");
+                $emailInput.style.borderColor = 'green';
+                $modifyPw.style.display = "flex";
+            }
+
+        }
+        $modifyBtn.onclick = e => {
+            console.log("ㅋㅋ 여까지 왔누");
+        }
+
     })();
+
+
+
 
 
     document.addEventListener("DOMContentLoaded", function () {
