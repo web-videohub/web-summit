@@ -3,7 +3,7 @@
 }
 
 /* 사이트 내 스크롤 바를 없앰 (투명화 상태)*/
-back_bg::-webkit-scrollbar {
+::-webkit-scrollbar {
     display: none;
 }
 .container {
@@ -143,12 +143,6 @@ img {
     border: 1px solid #c8c8c8;
 }
 
-input {
-    padding-left: 10px;
-    outline: none;
-    float: left;
-}
-
 .input-group button {
     box-shadow: none;
     border: 1px solid transparent;
@@ -171,6 +165,7 @@ button.primary {
 }
 
 #messageForm .input-group input {
+    padding-left: 10px;
     float: left;
     width: calc(98% - 80px);
     background-color: #1E2026;
@@ -262,4 +257,23 @@ ul::-webkit-scrollbar-button {
     color: #FFFFFF;
     margin: 0;
     font-weight: 500;
+}
+
+.chat-header input {
+    padding-left: 10px;
+    outline: none;
+    float: left;
+    width: calc(100% - 80px);
+    background-color: #1E2026;
+    color: #FFFFFF;
+    border: 0px;
+    height: 20px;
+    border-radius: 5px;
+}
+
+.chat-header .searchBtn {
+    border: none;
+    background-color: #5BC23C;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12);
+    color: #fff;
 }
